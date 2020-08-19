@@ -1,11 +1,14 @@
 blank_issues_enabled: false
 contact_links:
   - name: Bug Report
-    url: https://github.com/{package-name}/issues/new
-    about: Submit a GitHub issue
+    url: https://github.com/kevinbatdorf/alpine-magic-helpers/issues/new
+    about: Submit a bug report
+    labels: bug
   - name: Feature Request
-    url: https://github.com/{package-name}/discussions/new
-    about: Request a feature to be added to the platform
+    url: https://github.com/kevinbatdorf/alpine-magic-helpers/issues/new
+    about: Propose a new feature
+    labels: enhancement
   - name: Ask a Question
-    url: https://github.com/{package-name}/discussions/new
-    about: Ask questions and discuss with other community members
+    url: https://github.com/kevinbatdorf/alpine-magic-helpers/issues/new
+    about: Ask a question about the library
+    labels: question

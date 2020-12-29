@@ -32,10 +32,14 @@ const AlpineComponentMagicMethod = {
                 if (!componentBeingObserved) throw new Error('Component not found')
 
                 this[componentName] = syncWithObservedComponent(componentData(componentBeingObserved), componentBeingObserved, objectSetDeep)
-                updateOnMutation(componentBeingObserved, () => {
-                    this[componentName] = syncWithObservedComponent(componentBeingObserved.__x.getUnobservedData(), componentBeingObserved, objectSetDeep)
-                    if (componentBeingObserved !== $el) $el.__x.updateElements($el)
-                })
+                console.log(componentBeingObserved)
+                console.log($el)
+                if (componentBeingObserved !== $el) {
+                    updateOnMutation(componentBeingObserved, () => {
+                        this[componentName] = syncWithObservedComponent(componentBeingObserved.__x.getUnobservedData(), componentBeingObserved, objectSetDeep)
+                        $el.__x.updateElements($el)
+                    })
+                }
                 return this[componentName]
             }
         })

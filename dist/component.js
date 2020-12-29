@@ -142,8 +142,7 @@
             this[componentName] = syncWithObservedComponent(componentData(componentBeingObserved), componentBeingObserved, objectSetDeep);
             updateOnMutation(componentBeingObserved, function () {
               _this[componentName] = syncWithObservedComponent(componentBeingObserved.__x.getUnobservedData(), componentBeingObserved, objectSetDeep);
-
-              $el.__x.updateElements($el);
+              if (componentBeingObserved !== $el) $el.__x.updateElements($el);
             });
             return this[componentName];
           };
